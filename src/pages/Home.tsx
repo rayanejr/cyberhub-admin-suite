@@ -315,9 +315,9 @@ export default function Home() {
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Titre rotatif typewriter + dégradé violet */}
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-orbitron font-bold mb-4 sm:mb-6 animate-fade-in">
+          <h1 className="text-xl sm:text-3xl md:text-5xl lg:text-6xl font-orbitron font-bold mb-4 sm:mb-6 animate-fade-in">
             <span className="sr-only">Rôle : </span>
-            <div aria-live="polite" className="min-h-[4.8em] sm:min-h-[4.8em] md:min-h-[2.6em] flex justify-center items-start gap-x-2">
+            <div aria-live="polite" className="min-h-[5em] sm:min-h-[4.8em] md:min-h-[2.8em] flex justify-center items-start gap-x-2">
               <span className="cyber-text shrink-0">—</span>
               <span
                 className="bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-500 bg-clip-text text-transparent animate-fade-in"
