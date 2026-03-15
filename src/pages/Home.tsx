@@ -61,14 +61,14 @@ export default function Home() {
 
   // === Titres qui tournent (typewriter) ===
   const roles = [
-    "Apprenti Ingénieur Cloud & Sécurité",
-    "Apprenti Pentester Junior",
-    "Apprenti Ingénieur DevSecOps",
-    "Apprenti Analyste SOC (SIEM)",
-    "Apprenti Ingénieur Systèmes & Réseaux",
-    "Apprenti Analyste Réponse à Incident (CSIRT)",
-    "Apprenti Ingénieur Réseaux & Sécurité",
-    "Apprenti Ingénieur Sécurité Cloud (AWS / Azure)",
+    "Alternant Ingénieur Cloud & Sécurité",
+    "Pentester Junior (Alternance)",
+    "Alternant Ingénieur DevSecOps",
+    "Analyste SOC / SIEM (Alternance)",
+    "Alternant Ingénieur Systèmes & Réseaux",
+    "Réponse à Incident – CSIRT (Alternance)",
+    "Ingénieur Réseaux & Sécurité (Alternance)",
+    "Ingénieur Sécurité Cloud (AWS/Azure) – Alternance",
   ];
 
   const [resumeUrl, setResumeUrl] = useState<string | null>(null);
@@ -317,10 +317,10 @@ export default function Home() {
           {/* Titre rotatif typewriter + dégradé violet */}
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-orbitron font-bold mb-4 sm:mb-6 animate-fade-in">
             <span className="sr-only">Rôle : </span>
-            <div aria-live="polite" className="flex flex-wrap justify-center items-center gap-x-2">
+            <div aria-live="polite" className="flex justify-center items-center gap-x-2 min-h-[2.4em] sm:min-h-[2.4em] md:min-h-[1.3em]">
               <span className="cyber-text">—</span>
               <span
-                className="bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-500 bg-clip-text text-transparent animate-fade-in"
+                className="bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-500 bg-clip-text text-transparent animate-fade-in whitespace-nowrap"
                 style={{ animationDelay: "0.3s", animationFillMode: "both" }}
               >
                 {displayText || "\u00A0"}
@@ -332,8 +332,8 @@ export default function Home() {
             className="text-sm sm:text-base md:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto px-4 animate-fade-in leading-relaxed"
             style={{ animationDelay: "0.6s", animationFillMode: "both" }}
           >
-            Futur étudiant en Mastère Spécialisé Expert en Cybersécurité (Université de Technologie de Troyes, 2026–2027).
-            À la recherche d'une alternance (3 semaines entreprise / 1 semaine école) pour développer mes compétences en cybersécurité.
+            Étudiant en 2ᵉ année de Master IRS (Université Paris-Saclay, 2024–2026). Recherche une alternance (3
+            semaines entreprise / 1 semaine école) pour développer mes compétences en cybersécurité et DevSecOps.
           </p>
           <div
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 animate-fade-in"
@@ -420,8 +420,20 @@ export default function Home() {
               >
                 <CardContent className="p-6">
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    Étudiant en Master Ingénierie des Réseaux et Systèmes spécialité cybersécurité. Actuellement en alternance au Laboratoire National de Métrologie et d'Essais (LNE) sur des sujets systèmes, réseaux et sécurité. À partir de septembre 2026, j'intégrerai le Mastère Spécialisé Expert en Cybersécurité (UTT) afin de renforcer mes compétences en cybersécurité opérationnelle, SecOps et protection des systèmes d'information.
+                    Étudiant en Master IRS spécialité Cybersécurité, orienté DevSecOps et sécurité des infrastructures.
+                    Compétences en CI/CD (GitLab, Jenkins), Cloud et IaC (AWS, Terraform) et automatisation (Python,
+                    Bash, PowerShell) pour améliorer la sécurité et la fiabilité.
                   </p>
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    <Badge className="bg-green-600 text-white border-0">Master IRS Cyber 2024–2026</Badge>
+                    <Badge className="bg-green-600 text-white border-0">Alternance 3s/1s</Badge>
+                    <Badge className="bg-green-600 text-white border-0">DevSecOps • CI/CD • Jenkins</Badge>
+                    <Badge className="bg-green-600 text-white border-0">Cybersécurité • Pentest • Audit</Badge>
+                    <Badge className="bg-green-600 text-white border-0">Cloud • AWS • Terraform</Badge>
+                    <Badge className="bg-green-600 text-white border-0">
+                      Automatisation • Python • Bash • PowerShell
+                    </Badge>
+                  </div>
                 </CardContent>
               </Card>
 
@@ -435,7 +447,7 @@ export default function Home() {
                     <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-primary mb-2 relative z-10" />
                     <CardTitle className="text-sm sm:text-base relative z-10">Cybersécurité</CardTitle>
                     <CardDescription className="text-xs sm:text-sm relative z-10">
-                      Sécurisation des infrastructures • Gestion des accès • Durcissement systèmes • Supervision • Bonnes pratiques SSI
+                      Pentest, audit, durcissement
                     </CardDescription>
                   </CardHeader>
                 </Card>
@@ -449,7 +461,7 @@ export default function Home() {
                     <Target className="h-6 w-6 sm:h-8 sm:w-8 text-secondary mb-2 relative z-10" />
                     <CardTitle className="text-sm sm:text-base relative z-10">Systèmes & Réseaux</CardTitle>
                     <CardDescription className="text-xs sm:text-sm relative z-10">
-                      Windows Server • Active Directory • GPO • DNS • DHCP • Linux • VMware ESXi • Firewalling • Segmentation réseau
+                      VMware, AD, DNS, GPO, firewall
                     </CardDescription>
                   </CardHeader>
                 </Card>
@@ -759,6 +771,10 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-orbitron font-bold">
               <span className="cyber-text">Certifications</span>
             </h2>
+            <p className="text-lg text-muted-foreground">
+              Sécurité du Cloud (DataScientest, 03/2024) • Bash & Linux (01/2024) • Introduction à Python (01/2024) •
+              Prévention Sup’ (INRS, 02/2024)
+            </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
