@@ -317,15 +317,15 @@ export default function Home() {
           {/* Titre rotatif typewriter + dégradé violet */}
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-orbitron font-bold mb-4 sm:mb-6 animate-fade-in">
             <span className="sr-only">Rôle : </span>
-            <div aria-live="polite" className="flex justify-center items-center gap-x-2 min-h-[2.4em] sm:min-h-[2.4em] md:min-h-[1.3em]">
-              <span className="cyber-text">—</span>
+            <div aria-live="polite" className="min-h-[4.8em] sm:min-h-[4.8em] md:min-h-[2.6em] flex justify-center items-start gap-x-2">
+              <span className="cyber-text shrink-0">—</span>
               <span
-                className="bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-500 bg-clip-text text-transparent animate-fade-in whitespace-nowrap"
+                className="bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-500 bg-clip-text text-transparent animate-fade-in"
                 style={{ animationDelay: "0.3s", animationFillMode: "both" }}
               >
-                {displayText || "\u00A0"}
+                {displayText || "\u00A0\n\u00A0"}
               </span>
-              <span className="inline-block w-[2px] h-[1em] align-[-0.15em] bg-fuchsia-400 ml-1 animate-pulse" />
+              <span className="inline-block w-[2px] h-[1em] align-[-0.15em] bg-fuchsia-400 ml-1 animate-pulse shrink-0" />
             </div>
           </h1>
           <p
