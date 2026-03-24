@@ -1,127 +1,73 @@
-# 🛡️ CyberHub Admin Suite
+# 🛡️ Portfolio Cybersécurité — Rayane JERBI
 
-> Portfolio cybersécurité full-stack avec tableau de bord d'administration, assistant IA intégré et monitoring de sécurité temps réel.
+[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://typescriptlang.org)
+[![Supabase](https://img.shields.io/badge/Supabase-Backend-3FCF8E?logo=supabase&logoColor=white)](https://supabase.com)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)](https://vitejs.dev)
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-84.9%25-3178C6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-18.3-61DAFB?style=flat-square&logo=react)](https://react.dev/)
-[![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E?style=flat-square&logo=supabase)](https://supabase.com/)
-[![Vercel](https://img.shields.io/badge/Deploy-Vercel-000?style=flat-square&logo=vercel)](https://vercel.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
+> Hub cybersécurité complet : portfolio professionnel, blog technique, outils de sécurité interactifs et interface d'administration sécurisée.
 
 ---
 
 ## 📋 Table des matières
 
-- [Présentation](#-présentation)
+- [Aperçu](#-aperçu)
 - [Fonctionnalités](#-fonctionnalités)
 - [Stack technique](#-stack-technique)
-- [Architecture](#-architecture)
 - [Installation](#-installation)
-- [Configuration](#-configuration)
-- [Déploiement](#-déploiement)
+- [Architecture](#-architecture)
 - [Sécurité](#-sécurité)
-- [Structure du projet](#-structure-du-projet)
-- [Auteur](#-auteur)
+- [Licence](#-licence)
 
 ---
 
-## 🎯 Présentation
+## 🔍 Aperçu
 
-**CyberHub Admin Suite** est un portfolio cybersécurité personnel conçu pour exposer projets, expériences, certifications et veille technologique. Il embarque un panneau d'administration complet, un assistant IA conversationnel, et une suite de monitoring de sécurité avancée (scan de vulnérabilités, audit RLS, rate-limiting, journalisation des événements de sécurité).
-
-Le projet reflète une approche **Security by Design** : toutes les routes d'administration sont protégées par authentification JWT, Row Level Security activé sur chaque table, et un service de chiffrement AES-256 pour les données sensibles.
+Portfolio orienté cybersécurité conçu pour présenter mes compétences, projets et certifications. Il intègre des outils de sécurité fonctionnels et un panneau d'administration complet avec gestion CRUD de tout le contenu.
 
 ---
 
 ## ✨ Fonctionnalités
 
-### Portfolio public
-- Présentation des projets avec images générées par IA (Gemini / Stable Diffusion)
-- Timeline des expériences professionnelles et formations
-- Catalogue de compétences par catégorie et niveau de maîtrise
-- Certifications avec liens vers les credentials et téléchargement PDF
-- Veille technologique (CVE, actualités cyber, DevOps, Cloud)
-- Formulaire de contact avec rate-limiting anti-spam (3 msg / 15 min)
-- Assistant IA intégré (Gemini 2.5 Flash / GPT)
+### 👨‍💻 Interface publique
 
-### Panneau d'administration (`/admin`)
-| Module | Fonctionnalités |
+| Fonctionnalité | Description |
 |---|---|
-| Dashboard | Statistiques générales, messages non lus, accès rapide |
-| Projets | CRUD, upload images, génération IA, sync GitHub |
-| Veille | Import RSS/API, gestion CVE, publication/dépublication |
-| Expériences | Timeline, achievements, technologies |
-| Formations | Parcours académique, compétences acquises |
-| Compétences | Niveaux 1-5, icônes, catégorisation |
-| Certifications | Upload PDF, dates d'expiration, credentials |
-| Sécurité | Logs, scan vulnérabilités, tests pentest automatisés |
-| Utilisateurs | Gestion sessions Supabase Auth |
-| GitHub Sync | Synchronisation bidirectionnelle |
+| **Accueil** | Hero animé, à propos, compétences (offensive/défensive/outils), projets récents |
+| **Projets** | Liste filtrable avec recherche, pages détaillées (image, techno, GitHub) |
+| **Blog** | Articles techniques avec tags, images et contenu complet |
+| **Formation** | Timeline académique interactive |
+| **Expérience** | Missions et réalisations professionnelles |
+| **Outils Cyber** | Générateur de mots de passe, analyseur headers, testeur SSL/TLS, scanner de ports, vérificateur de fuites |
+| **Certifications** | Affichage des certifications avec visualiseur PDF/image |
+| **Contact** | Formulaire de contact sécurisé |
+
+### 🔐 Interface d'administration
+
+| Module | Opérations |
+|---|---|
+| **Dashboard** | Statistiques, notifications, vue d'ensemble |
+| **Projets** | CRUD complet avec upload d'images |
+| **Blog** | Gestion des articles (brouillon/publié) |
+| **Formation** | Gestion du parcours académique |
+| **Expérience** | Gestion des expériences professionnelles |
+| **Compétences** | Gestion par catégories |
+| **Certifications** | Upload PDF/images, gestion des certifs |
+| **Utilisateurs** | Gestion des comptes admin |
+| **Sécurité** | Dashboard sécurité, tests, audit |
 
 ---
 
 ## 🛠️ Stack technique
 
-### Frontend
-- **Framework** : React 18.3 + TypeScript
-- **Build** : Vite
-- **Routing** : React Router DOM v6
-- **UI** : shadcn/ui (Radix UI) + Tailwind CSS
-- **Forms** : React Hook Form + Zod
-- **State** : TanStack Query + React Hooks
-- **Icons** : Lucide React
-- **Themes** : next-themes (dark/light)
-
-### Backend (BaaS)
-- **Plateforme** : Supabase
-- **Base de données** : PostgreSQL avec RLS
-- **Edge Functions** : Deno (TypeScript)
-- **Auth** : Supabase Auth (JWT)
-- **Storage** : Supabase Storage (images, PDFs, fichiers admin)
-
-### IA & APIs
-- Lovable AI Gateway (Gemini 2.5 Flash/Pro, GPT)
-- Google Gemini 2.5 Flash Image Preview
-- HuggingFace Inference API (Stable Diffusion)
-
----
-
-## 🏗️ Architecture
-
-```
-cyberhub-admin-suite/
-├── src/
-│   ├── components/          # Composants React réutilisables
-│   │   ├── admin/           # Composants panneau admin
-│   │   ├── portfolio/       # Composants portfolio public
-│   │   └── ui/              # shadcn/ui components
-│   ├── pages/               # Pages principales (React Router)
-│   ├── hooks/               # Custom hooks (useAuth, useProjects, …)
-│   ├── integrations/        # Client Supabase auto-généré
-│   └── lib/                 # Utilitaires (crypto, validation, …)
-├── supabase/
-│   ├── functions/           # Edge Functions Deno
-│   │   ├── ai-assistant/
-│   │   ├── security-monitor/
-│   │   ├── security-vulnerability-scanner/
-│   │   ├── github-sync/
-│   │   └── …
-│   └── migrations/          # Migrations SQL versionnées
-└── public/                  # Assets statiques
-```
-
-### Tables PostgreSQL principales
-
-| Table | Rôle |
-|---|---|
-| `projects` | Projets (technologies, images, liens) |
-| `experiences` | Expériences professionnelles |
-| `formations` | Parcours de formation |
-| `skills` | Compétences par catégorie |
-| `certifications` | Certifications + PDFs |
-| `veille_techno` | Articles de veille |
-| `contact_messages` | Messages du formulaire |
-| `security_events` | Journalisation événements sécurité |
+- **Frontend** : React 18 · TypeScript · Tailwind CSS · shadcn/ui
+- **Build** : Vite 5
+- **Backend** : Supabase (Auth, Database, Storage, Edge Functions)
+- **State** : TanStack React Query
+- **Routing** : React Router v6
+- **UI** : Radix UI · Lucide Icons · Framer Motion
+- **Sécurité** : RLS Supabase · Edge Functions · Validation Zod
 
 ---
 
@@ -129,116 +75,83 @@ cyberhub-admin-suite/
 
 ### Prérequis
 
-- Node.js ≥ 18 ou [Bun](https://bun.sh/)
-- Compte [Supabase](https://supabase.com/) (gratuit)
-- Compte [Lovable](https://lovable.dev/) (pour les Edge Functions IA)
+- Node.js ≥ 18
+- npm ou bun
 
-### Cloner le projet
-
-```bash
-git clone https://github.com/rayanejr/cyberhub-admin-suite.git
-cd cyberhub-admin-suite
-```
-
-### Installer les dépendances
+### Démarrage rapide
 
 ```bash
+# Cloner le repo
+git clone <URL_DU_REPO>
+cd <NOM_DU_PROJET>
+
+# Installer les dépendances
 npm install
-# ou
-bun install
-```
 
-### Démarrer en développement
+# Configurer les variables d'environnement
+cp .env.example .env
+# Remplir les variables Supabase dans .env
 
-```bash
+# Lancer le serveur de développement
 npm run dev
-# ou
-bun dev
 ```
 
-L'application est accessible sur `http://localhost:5173`.
-
----
-
-## ⚙️ Configuration
-
-Créez un fichier `.env` à la racine (ne jamais commiter ce fichier) :
+### Variables d'environnement requises
 
 ```env
-VITE_SUPABASE_URL=https://<votre-projet>.supabase.co
-VITE_SUPABASE_ANON_KEY=<votre-anon-key>
+VITE_SUPABASE_URL=https://votre-projet.supabase.co
+VITE_SUPABASE_PUBLISHABLE_KEY=votre_clé_anon
 ```
 
-Configurez les secrets des Edge Functions dans Supabase Dashboard → Settings → Edge Functions :
-
-| Secret | Description |
-|---|---|
-| `SUPABASE_SERVICE_ROLE_KEY` | Clé service Supabase |
-| `LOVABLE_API_KEY` | Clé Lovable AI Gateway |
-| `HUGGING_FACE_ACCESS_TOKEN` | Token HuggingFace (images IA) |
-| `ENCRYPTION_KEY` | Clé AES-256 (32 caractères) |
-
-> ⚠️ Ne jamais exposer `SUPABASE_SERVICE_ROLE_KEY` ou `ENCRYPTION_KEY` côté client.
+> ⚠️ Ne jamais commiter le fichier `.env` — il est exclu via `.gitignore`.
 
 ---
 
-## 📦 Déploiement
+## 🏗️ Architecture
 
-### Vercel (recommandé)
+```
+src/
+├── components/          # Composants réutilisables
+│   ├── admin/           # Modules d'administration
+│   ├── auth/            # Authentification
+│   └── ui/              # Composants shadcn/ui
+├── hooks/               # Hooks personnalisés
+├── integrations/        # Client Supabase & types
+├── pages/               # Pages de l'application
+├── utils/               # Utilitaires
+└── main.tsx             # Point d'entrée
 
-```bash
-# Via CLI Vercel
-vercel deploy
-
-# Ou connecter le repo GitHub dans le dashboard Vercel
-# Build command : npm run build
-# Output directory : dist
+supabase/
+├── functions/           # Edge Functions (API serverless)
+└── migrations/          # Migrations SQL
 ```
 
-### Variables d'environnement en production
+### Tables principales (Supabase)
 
-Ajoutez `VITE_SUPABASE_URL` et `VITE_SUPABASE_ANON_KEY` dans les settings Vercel → Environment Variables.
-
----
-
-## 🔐 Sécurité
-
-Ce projet applique les bonnes pratiques suivantes :
-
-| Mesure | Détail |
+| Table | Description |
 |---|---|
-| **RLS** | Row Level Security activé sur toutes les tables |
-| **JWT** | Authentification via Supabase Auth |
-| **AES-256** | Chiffrement des données sensibles |
-| **Rate Limiting** | 3 messages / 15 min (DB + application) |
-| **Zod** | Validation de tous les inputs côté client |
-| **CSRF** | Tokens et headers sécurisés |
-| **RGPD** | Suppression automatique des IPs après 30 jours |
-| **Pentest auto** | Edge Function `security-real-tests` |
-| **Scan vulnérabilités** | Edge Function `security-vulnerability-scanner` |
-| **Security headers** | CSP, HSTS, X-Frame-Options via Vercel |
-
-Pour signaler une vulnérabilité : [admin@rayane-jerbi.com](mailto:admin@rayane-jerbi.com)
+| `projects` | Projets du portfolio |
+| `blog_posts` | Articles de blog |
+| `certifications` | Certifications professionnelles |
+| `skills` | Compétences techniques |
+| `experiences` | Expériences professionnelles |
+| `education` | Parcours de formation |
+| `contacts` | Messages du formulaire de contact |
+| `admin_users` | Comptes administrateurs |
 
 ---
 
-## 👤 Auteur
+## 🔒 Sécurité
 
-**Rayane Jerbi**
-Étudiant M2 Ingénierie des Réseaux et Systèmes — Cybersécurité
-Université Paris-Saclay × AFORP
-
-Alternant Ingénieur Réseaux & Systèmes — LNE (Laboratoire National de Métrologie et d'Essais)
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Rayane%20Jerbi-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/rayane-jerbi)
-[![GitHub](https://img.shields.io/badge/GitHub-rayanejr-181717?style=flat-square&logo=github)](https://github.com/rayanejr)
+- **Row Level Security (RLS)** activé sur toutes les tables
+- **Authentification** via Supabase Auth
+- **Edge Functions** pour les opérations sensibles
+- **Validation des entrées** côté client (Zod) et serveur
+- **Storage sécurisé** avec policies par bucket
+- **Clés API** : seule la clé `anon` (publique) est utilisée côté client
 
 ---
 
-## 📄 License
+## 📄 Licence
 
-Ce projet est distribué sous licence [MIT](LICENSE).
-
----
-
-*Stack : React · TypeScript · Supabase · PostgreSQL · Deno · Tailwind CSS · Vite*
+MIT © 2025 Rayane JERBI — voir le fichier [LICENSE](./LICENSE).
