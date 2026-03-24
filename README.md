@@ -1,73 +1,157 @@
-# Welcome to your Lovable project
+# 🛡️ Portfolio Cybersécurité — Rayane JERBI
 
-## Project info
+[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://typescriptlang.org)
+[![Supabase](https://img.shields.io/badge/Supabase-Backend-3FCF8E?logo=supabase&logoColor=white)](https://supabase.com)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)](https://vitejs.dev)
 
-**URL**: https://lovable.dev/projects/7689a4ac-8987-4969-8d66-62fdd906913e
+> Hub cybersécurité complet : portfolio professionnel, blog technique, outils de sécurité interactifs et interface d'administration sécurisée.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 📋 Table des matières
 
-**Use Lovable**
+- [Aperçu](#-aperçu)
+- [Fonctionnalités](#-fonctionnalités)
+- [Stack technique](#-stack-technique)
+- [Installation](#-installation)
+- [Architecture](#-architecture)
+- [Sécurité](#-sécurité)
+- [Licence](#-licence)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7689a4ac-8987-4969-8d66-62fdd906913e) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🔍 Aperçu
 
-**Use your preferred IDE**
+Portfolio orienté cybersécurité conçu pour présenter mes compétences, projets et certifications. Il intègre des outils de sécurité fonctionnels et un panneau d'administration complet avec gestion CRUD de tout le contenu.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## ✨ Fonctionnalités
 
-Follow these steps:
+### 👨‍💻 Interface publique
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+| Fonctionnalité | Description |
+|---|---|
+| **Accueil** | Hero animé, à propos, compétences (offensive/défensive/outils), projets récents |
+| **Projets** | Liste filtrable avec recherche, pages détaillées (image, techno, GitHub) |
+| **Blog** | Articles techniques avec tags, images et contenu complet |
+| **Formation** | Timeline académique interactive |
+| **Expérience** | Missions et réalisations professionnelles |
+| **Outils Cyber** | Générateur de mots de passe, analyseur headers, testeur SSL/TLS, scanner de ports, vérificateur de fuites |
+| **Certifications** | Affichage des certifications avec visualiseur PDF/image |
+| **Contact** | Formulaire de contact sécurisé |
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 🔐 Interface d'administration
 
-# Step 3: Install the necessary dependencies.
-npm i
+| Module | Opérations |
+|---|---|
+| **Dashboard** | Statistiques, notifications, vue d'ensemble |
+| **Projets** | CRUD complet avec upload d'images |
+| **Blog** | Gestion des articles (brouillon/publié) |
+| **Formation** | Gestion du parcours académique |
+| **Expérience** | Gestion des expériences professionnelles |
+| **Compétences** | Gestion par catégories |
+| **Certifications** | Upload PDF/images, gestion des certifs |
+| **Utilisateurs** | Gestion des comptes admin |
+| **Sécurité** | Dashboard sécurité, tests, audit |
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+---
+
+## 🛠️ Stack technique
+
+- **Frontend** : React 18 · TypeScript · Tailwind CSS · shadcn/ui
+- **Build** : Vite 5
+- **Backend** : Supabase (Auth, Database, Storage, Edge Functions)
+- **State** : TanStack React Query
+- **Routing** : React Router v6
+- **UI** : Radix UI · Lucide Icons · Framer Motion
+- **Sécurité** : RLS Supabase · Edge Functions · Validation Zod
+
+---
+
+## 🚀 Installation
+
+### Prérequis
+
+- Node.js ≥ 18
+- npm ou bun
+
+### Démarrage rapide
+
+```bash
+# Cloner le repo
+git clone <URL_DU_REPO>
+cd <NOM_DU_PROJET>
+
+# Installer les dépendances
+npm install
+
+# Configurer les variables d'environnement
+cp .env.example .env
+# Remplir les variables Supabase dans .env
+
+# Lancer le serveur de développement
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Variables d'environnement requises
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```env
+VITE_SUPABASE_URL=https://votre-projet.supabase.co
+VITE_SUPABASE_PUBLISHABLE_KEY=votre_clé_anon
+```
 
-**Use GitHub Codespaces**
+> ⚠️ Ne jamais commiter le fichier `.env` — il est exclu via `.gitignore`.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 🏗️ Architecture
 
-This project is built with:
+```
+src/
+├── components/          # Composants réutilisables
+│   ├── admin/           # Modules d'administration
+│   ├── auth/            # Authentification
+│   └── ui/              # Composants shadcn/ui
+├── hooks/               # Hooks personnalisés
+├── integrations/        # Client Supabase & types
+├── pages/               # Pages de l'application
+├── utils/               # Utilitaires
+└── main.tsx             # Point d'entrée
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+supabase/
+├── functions/           # Edge Functions (API serverless)
+└── migrations/          # Migrations SQL
+```
 
-## How can I deploy this project?
+### Tables principales (Supabase)
 
-Simply open [Lovable](https://lovable.dev/projects/7689a4ac-8987-4969-8d66-62fdd906913e) and click on Share -> Publish.
+| Table | Description |
+|---|---|
+| `projects` | Projets du portfolio |
+| `blog_posts` | Articles de blog |
+| `certifications` | Certifications professionnelles |
+| `skills` | Compétences techniques |
+| `experiences` | Expériences professionnelles |
+| `education` | Parcours de formation |
+| `contacts` | Messages du formulaire de contact |
+| `admin_users` | Comptes administrateurs |
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+## 🔒 Sécurité
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- **Row Level Security (RLS)** activé sur toutes les tables
+- **Authentification** via Supabase Auth
+- **Edge Functions** pour les opérations sensibles
+- **Validation des entrées** côté client (Zod) et serveur
+- **Storage sécurisé** avec policies par bucket
+- **Clés API** : seule la clé `anon` (publique) est utilisée côté client
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+---
+
+## 📄 Licence
+
+MIT © 2025 Rayane JERBI — voir le fichier [LICENSE](./LICENSE).
