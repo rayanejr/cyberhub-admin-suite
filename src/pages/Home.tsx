@@ -464,33 +464,6 @@ export default function Home() {
                   </CardHeader>
                 </Card>
 
-                <Card
-                  className="cyber-border card-interactive bg-card/50 backdrop-blur-sm animate-fade-in"
-                  style={{ animationDelay: "1.3s", animationFillMode: "both" }}
-                >
-                  <CardHeader className="p-4 relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <Terminal className="h-6 w-6 sm:h-8 sm:w-8 text-accent mb-2 relative z-10" />
-                    <CardTitle className="text-sm sm:text-base relative z-10">Automatisation</CardTitle>
-                    <CardDescription className="text-xs sm:text-sm relative z-10">
-                      Python, PowerShell, Bash, Git/GitLab, Docker
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
-
-                <Card
-                  className="cyber-border card-interactive bg-card/50 backdrop-blur-sm animate-fade-in"
-                  style={{ animationDelay: "1.5s", animationFillMode: "both" }}
-                >
-                  <CardHeader className="p-4 relative">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <Code className="h-6 w-6 sm:h-8 sm:w-8 text-primary mb-2 relative z-10" />
-                    <CardTitle className="text-sm sm:text-base relative z-10">Cloud & DevOps</CardTitle>
-                    <CardDescription className="text-xs sm:text-sm relative z-10">
-                      AWS (notions), CI/CD GitLab/Jenkins (notions)
-                    </CardDescription>
-                  </CardHeader>
-                </Card>
               </div>
             </div>
           </div>
