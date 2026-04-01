@@ -332,8 +332,8 @@ export default function Home() {
             className="text-sm sm:text-base md:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto px-4 animate-fade-in leading-relaxed"
             style={{ animationDelay: "0.6s", animationFillMode: "both" }}
           >
-            Étudiant en 2ᵉ année de Master IRS (Université Paris-Saclay, 2024–2026). Recherche une alternance (3
-            semaines entreprise / 1 semaine école) pour développer mes compétences en cybersécurité et DevSecOps.
+             Futur diplômé en Master IRS spécialité Cybersécurité (Université Paris-Saclay) et admis en Mastère Spécialisé Expert Cybersécurité à l'Université de Technologie de Troyes (2026–2027). Recherche une alternance (3
+             semaines entreprise / 1 semaine école) pour développer mes compétences en cybersécurité.
           </p>
           <div
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 animate-fade-in"
