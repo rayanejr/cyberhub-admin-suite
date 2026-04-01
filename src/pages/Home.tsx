@@ -412,7 +412,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Colonne droite : pitch + 3 piliers */}
+            {/* Colonne droite : pitch + 4 piliers */}
             <div className="space-y-8">
               <Card
                 className="cyber-border hover:cyber-glow transition-all duration-500 bg-card/50 backdrop-blur-sm animate-fade-in"
@@ -420,24 +420,22 @@ export default function Home() {
               >
                 <CardContent className="p-6">
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    Étudiant en Master IRS spécialité Cybersécurité, orienté DevSecOps et sécurité des infrastructures.
-                    Compétences en CI/CD (GitLab, Jenkins), Cloud et IaC (AWS, Terraform) et automatisation (Python,
-                    Bash, PowerShell) pour améliorer la sécurité et la fiabilité.
+                    Futur diplômé en Master IRS spécialité Cybersécurité (Université Paris-Saclay) et admis en Mastère Spécialisé Expert Cybersécurité à l'UTT.
+                    En apprentissage depuis 2 ans au Laboratoire National de Métrologie et d'Essais en tant qu'Ingénieur Systèmes & Réseaux.
+                    Compétences en sécurisation d'infrastructures, administration systèmes et réseaux, automatisation (Python, PowerShell, Bash) et cybersécurité opérationnelle.
                   </p>
                   <div className="mt-4 flex flex-wrap gap-3">
-                    <Badge className="bg-green-600 text-white border-0">Master IRS Cyber 2024–2026</Badge>
+                    <Badge className="bg-green-600 text-white border-0">Mastère Spécialisé Expert Cybersécurité 2026–2027</Badge>
                     <Badge className="bg-green-600 text-white border-0">Alternance 3s/1s</Badge>
-                    <Badge className="bg-green-600 text-white border-0">DevSecOps • CI/CD • Jenkins</Badge>
                     <Badge className="bg-green-600 text-white border-0">Cybersécurité • Pentest • Audit</Badge>
-                    <Badge className="bg-green-600 text-white border-0">Cloud • AWS • Terraform</Badge>
-                    <Badge className="bg-green-600 text-white border-0">
-                      Automatisation • Python • Bash • PowerShell
-                    </Badge>
+                    <Badge className="bg-green-600 text-white border-0">Systèmes & Réseaux • AD • GPO • Firewall</Badge>
+                    <Badge className="bg-green-600 text-white border-0">Automatisation • Python • PowerShell • Bash</Badge>
+                    <Badge className="bg-green-600 text-white border-0">Cloud • AWS (notions) • Docker</Badge>
                   </div>
                 </CardContent>
               </Card>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <Card
                   className="cyber-border card-interactive bg-card/50 backdrop-blur-sm animate-fade-in"
                   style={{ animationDelay: "0.9s", animationFillMode: "both" }}
@@ -447,7 +445,7 @@ export default function Home() {
                     <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-primary mb-2 relative z-10" />
                     <CardTitle className="text-sm sm:text-base relative z-10">Cybersécurité</CardTitle>
                     <CardDescription className="text-xs sm:text-sm relative z-10">
-                      Pentest, audit, durcissement
+                      Pentest (notions), audit, durcissement CIS/ANSSI, ISO 27001, RGPD
                     </CardDescription>
                   </CardHeader>
                 </Card>
@@ -461,21 +459,35 @@ export default function Home() {
                     <Target className="h-6 w-6 sm:h-8 sm:w-8 text-secondary mb-2 relative z-10" />
                     <CardTitle className="text-sm sm:text-base relative z-10">Systèmes & Réseaux</CardTitle>
                     <CardDescription className="text-xs sm:text-sm relative z-10">
-                      VMware, AD, DNS, GPO, firewall
+                      VMware ESXi, Active Directory, DNS, GPO, Fortinet, Cisco
                     </CardDescription>
                   </CardHeader>
                 </Card>
 
                 <Card
-                  className="cyber-border card-interactive bg-card/50 backdrop-blur-sm sm:col-span-2 lg:col-span-1 animate-fade-in"
+                  className="cyber-border card-interactive bg-card/50 backdrop-blur-sm animate-fade-in"
                   style={{ animationDelay: "1.3s", animationFillMode: "both" }}
                 >
                   <CardHeader className="p-4 relative">
                     <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <Code className="h-6 w-6 sm:h-8 sm:w-8 text-accent mb-2 relative z-10" />
-                    <CardTitle className="text-sm sm:text-base relative z-10">DevOps & Cloud</CardTitle>
+                    <Terminal className="h-6 w-6 sm:h-8 sm:w-8 text-accent mb-2 relative z-10" />
+                    <CardTitle className="text-sm sm:text-base relative z-10">Automatisation</CardTitle>
                     <CardDescription className="text-xs sm:text-sm relative z-10">
-                      CI/CD, GitLab, Jenkins, AWS, Terraform
+                      Python, PowerShell, Bash, Git/GitLab, Docker
+                    </CardDescription>
+                  </CardHeader>
+                </Card>
+
+                <Card
+                  className="cyber-border card-interactive bg-card/50 backdrop-blur-sm animate-fade-in"
+                  style={{ animationDelay: "1.5s", animationFillMode: "both" }}
+                >
+                  <CardHeader className="p-4 relative">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <Code className="h-6 w-6 sm:h-8 sm:w-8 text-primary mb-2 relative z-10" />
+                    <CardTitle className="text-sm sm:text-base relative z-10">Cloud & DevOps</CardTitle>
+                    <CardDescription className="text-xs sm:text-sm relative z-10">
+                      AWS (notions), CI/CD GitLab/Jenkins (notions)
                     </CardDescription>
                   </CardHeader>
                 </Card>
