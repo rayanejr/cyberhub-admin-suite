@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ArrowRight, Shield, Target, Code, Award, ExternalLink, ChevronRight, Mail, Phone, MapPin, Terminal, Copy, Download, Server, Cloud } from "lucide-react";
+import { ArrowRight, Shield, Target, Code, Award, ExternalLink, ChevronRight, Mail, Phone, MapPin, Terminal, Copy, Download } from "lucide-react";
 import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import CVDownloadButton from "@/components/CVDownloadButton";
 import AIAssistantSection from "@/components/AIAssistantSection";
