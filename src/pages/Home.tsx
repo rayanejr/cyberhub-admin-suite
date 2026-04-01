@@ -332,8 +332,8 @@ export default function Home() {
             className="text-sm sm:text-base md:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto px-4 animate-fade-in leading-relaxed"
             style={{ animationDelay: "0.6s", animationFillMode: "both" }}
           >
-            Étudiant en 2ᵉ année de Master IRS (Université Paris-Saclay, 2024–2026). Recherche une alternance (3
-            semaines entreprise / 1 semaine école) pour développer mes compétences en cybersécurité et DevSecOps.
+             Futur diplômé en Master IRS spécialité Cybersécurité (Université Paris-Saclay) et admis en Mastère Spécialisé Expert Cybersécurité à l'Université de Technologie de Troyes (2026–2027). Recherche une alternance (3
+             semaines entreprise / 1 semaine école) pour développer mes compétences en cybersécurité.
           </p>
           <div
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 animate-fade-in"
@@ -783,10 +783,6 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-orbitron font-bold">
               <span className="cyber-text">Certifications</span>
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Sécurité du Cloud (DataScientest, 03/2024) • Bash & Linux (01/2024) • Introduction à Python (01/2024) •
-              Prévention Sup’ (INRS, 02/2024)
-            </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
