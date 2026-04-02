@@ -230,6 +230,7 @@ const AdminAuth: React.FC<AdminAuthProps> = ({ onAuthenticated }) => {
                       required
                       disabled={loading}
                       minLength={6}
+                      autoComplete="current-password"
                       className="cyber-border focus:cyber-glow h-10 text-sm"
                     />
                   </div>

@@ -201,17 +201,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-base">Email</h3>
-                      <p className="text-muted-foreground text-base">rayane.jerbi@yahoo.com</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center gap-4 group cursor-default animate-fade-in" style={{ animationDelay: '1.4s', animationFillMode: 'both' }}>
-                    <div className="p-3 bg-gradient-to-br from-secondary/20 to-accent/10 rounded-lg pulse-glow group-hover:scale-110 transition-transform duration-300">
-                      <Phone className="w-5 h-5 text-secondary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-base">Téléphone</h3>
-                      <p className="text-muted-foreground text-base">+33 6 20 28 41 14</p>
+                      <p className="text-muted-foreground text-base">Contactez-moi via le formulaire</p>
                     </div>
                   </div>
                   
