@@ -22,7 +22,4 @@ export default defineConfig(({ mode }) => ({
   preview: {
     port: 8080,
   },
-  esbuild: {
-    drop: mode === 'production' ? ['console', 'debugger'] : [],
-  },
 }));

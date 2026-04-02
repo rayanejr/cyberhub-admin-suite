@@ -1,4 +1,0 @@
-Contact: https://jerbi-rayane.vercel.app/contact
-Expires: 2027-04-02T00:00:00.000Z
-Preferred-Languages: fr, en
-Canonical: https://jerbi-rayane.vercel.app/.well-known/security.txt

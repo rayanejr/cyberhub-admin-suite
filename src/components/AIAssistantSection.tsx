@@ -89,7 +89,7 @@ const AIAssistantSection: React.FC = () => {
       
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: "Désolé, je rencontre des difficultés techniques. Vous pouvez utiliser le formulaire de contact ou réessayer dans quelques instants.",
+        text: "Désolé, je rencontre des difficultés techniques. Vous pouvez contacter directement Rayane :\n\n📧 rayane.jerbi@yahoo.com\n📞 +33 6 20 28 41 14\n\nOu réessayer dans quelques instants.",
         isUser: false,
         timestamp: new Date()
       };

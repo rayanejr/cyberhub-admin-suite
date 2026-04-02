@@ -1,4 +1,4 @@
-/* Fonts are loaded locally or via system fallbacks to avoid external CDN dependencies */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
