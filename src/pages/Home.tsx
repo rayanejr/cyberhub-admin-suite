@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ArrowRight, Shield, Target, Award, ExternalLink, ChevronRight, Mail, Phone, MapPin, Copy, Download } from "lucide-react";
+import { ArrowRight, Shield, Target, Award, ExternalLink, ChevronRight, Mail, MapPin, Copy, Download } from "lucide-react";
 import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import CVDownloadButton from "@/components/CVDownloadButton";
 import AIAssistantSection from "@/components/AIAssistantSection";
@@ -827,20 +827,12 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mb-10">
             <Card className="cyber-border hover:cyber-glow transition">
               <CardContent className="p-6 text-center">
                 <Mail className="h-10 w-10 text-primary mx-auto mb-3" />
                 <h3 className="font-semibold mb-1">Email</h3>
-                <p className="text-muted-foreground text-sm">rayane.jerbi@yahoo.com</p>
-              </CardContent>
-            </Card>
-
-            <Card className="cyber-border hover:cyber-glow transition">
-              <CardContent className="p-6 text-center">
-                <Phone className="h-10 w-10 text-secondary mx-auto mb-3" />
-                <h3 className="font-semibold mb-1">Téléphone</h3>
-                <p className="text-muted-foreground text-sm">+33 6 20 28 41 14</p>
+                <p className="text-muted-foreground text-sm">Contactez-moi via le formulaire</p>
               </CardContent>
             </Card>
 
@@ -848,7 +840,7 @@ export default function Home() {
               <CardContent className="p-6 text-center">
                 <MapPin className="h-10 w-10 text-accent mx-auto mb-3" />
                 <h3 className="font-semibold mb-1">Localisation</h3>
-                <p className="text-muted-foreground text-sm">Paris 15ᵉ, France</p>
+                <p className="text-muted-foreground text-sm">Paris, France</p>
               </CardContent>
             </Card>
           </div>

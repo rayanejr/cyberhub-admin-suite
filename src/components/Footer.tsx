@@ -51,7 +51,7 @@ export function Footer() {
 
   const github = "https://github.com/rayanejr";
   const linkedin = "https://www.linkedin.com/in/rayane-jerbi";
-  const email = profile?.email || "rayane.jerbi@yahoo.fr";
+  const email = profile?.email || "";
   const resumeUrl = "";
 
   return (
